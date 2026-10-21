@@ -77,6 +77,17 @@ com.sony.huey.dlna.module
 com.sony.huey.dlna.renderersettings
 com.sony.dtv.gestureapp
 
+# second pass, disabled by choice (2026-10-22): accessibility and printing unused,
+# File Commander preload unused, HbbTV runtime (no HbbTV broadcasts in India)
+com.google.android.marvin.talkback
+com.android.printspooler
+com.mobisystems.fileman
+com.sony.dtv.hbbtvplayer
+
+# Storage notes: /data is only 4 GB and sat at 89% full. `pm trim-caches 1G`
+# freed 600 MB, and /sdcard/Download held 120 MB of stale installer APKs
+# (Stremio, tv-arm) from 2024, deleted. Rerun the trim every month or two.
+
 # Home: only after the new launcher is installed
 com.google.android.tungsten.setupwraith        # its RecoveryActivity claims HOME
 com.google.android.apps.tv.dreamx              # Ambient screensaver; point screensaver_components at ClockDream first
